@@ -259,7 +259,7 @@ body {
 
 .footer {
 	padding: 10px 15px;
-	height: 20px;
+	min-height: 40px;
 	text-align: center;
 	font-size: 15px;
 	border-top: 1px solid #e6e6e6;
@@ -282,7 +282,10 @@ body {
 
 .todo-count {
 	float: left;
-	text-align: left;
+	/* text-align: left; */
+	width: 50%;
+	text-align: center;
+	display:inline;
 }
 
 .todo-count strong {
@@ -290,16 +293,19 @@ body {
 }
 
 .filters {
-	margin: 0;
+	margin: 10;
 	padding: 0;
 	list-style: none;
-	position: absolute;
+	position: relative;
 	right: 0;
 	left: 0;
 }
 
 .filters li {
-	display: inline;
+	display:inline-block;
+	min-width: 20%;
+	min-height: 20px;
+	/* padding: 3px; */
 }
 
 .filters li a {
@@ -321,11 +327,16 @@ body {
 
 .clear-completed,
 html .clear-completed:active {
-	float: right;
+	/* float: right; */
+	
 	position: relative;
+	display:inline;
 	line-height: 20px;
-	text-decoration: none;
+	text-decoration: none;	
 	cursor: pointer;
+	width: 50%;
+	text-align:center;
+	margin-top:10px;
 }
 
 .clear-completed:hover {

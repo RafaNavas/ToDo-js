@@ -7,7 +7,7 @@ const txtImputToDo = document.querySelector( '.new-todo' );
 const btnDelCompletados = document.querySelector( '.clear-completed' );
 const ulFilters = document.querySelector('.filters');
 const aFiltros = document.querySelectorAll('.filtro');
-const qToDos = document.querySelector('strong');
+// const qToDos = document.querySelectorAll('strong'); 
 
 
 
