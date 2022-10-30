@@ -24,16 +24,4 @@ export class ToDo {
         // this.conteoToDo();
     }
 
-    // conteoToDo = () => {
-    //     if(this.ToDos.length === 0){
-    //     qToDo.innerText = '0 pendiene(s)';
-    //     } else {
-    //         qToDo.innerText = `${this.ToDos.length} pendiente(s)`;
-    //     }
-    // }
-
-    imprimirClase() {
-        // console.log( `${ this.id } - ${ this.tarea }` );
-    }
-
 }

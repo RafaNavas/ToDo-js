@@ -7,7 +7,7 @@ const txtImputToDo = document.querySelector( '.new-todo' );
 const btnDelCompletados = document.querySelector( '.clear-completed' );
 const ulFilters = document.querySelector('.filters');
 const aFiltros = document.querySelectorAll('.filtro');
-// const qToDos = document.querySelectorAll('strong'); 
+const qToDos = document.querySelectorAll('strong'); 
 
 
 
@@ -45,7 +45,7 @@ txtImputToDo.addEventListener( 'keyup', ( event )=> {
         crearToDoHTML( nuevoToDo ); 
         txtImputToDo.value = '';
 
-        qToDos.innerText = this.ToDos.length;
+        // qToDos.innerText = this.ToDos.length;
 
     }
 

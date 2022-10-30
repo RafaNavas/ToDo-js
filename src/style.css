@@ -45,6 +45,7 @@ body {
 	background: #fff;
 	margin: 130px 0 40px 0;
 	position: relative;
+	min-height: 250px;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
 	            0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
@@ -259,7 +260,7 @@ body {
 
 .footer {
 	padding: 10px 15px;
-	min-height: 40px;
+	min-height: 130px;
 	text-align: center;
 	font-size: 15px;
 	border-top: 1px solid #e6e6e6;
@@ -280,11 +281,15 @@ body {
 	            0 17px 2px -6px rgba(0, 0, 0, 0.2);
 }
 
+.contadores {
+	display: block;
+}
+
 .todo-count {
 	float: left;
 	/* text-align: left; */
-	width: 50%;
-	text-align: center;
+	width: 30%;
+	text-align:center;
 	display:inline;
 }
 
@@ -330,11 +335,11 @@ html .clear-completed:active {
 	/* float: right; */
 	
 	position: relative;
-	display:inline;
+	display: inline;
 	line-height: 20px;
 	text-decoration: none;	
 	cursor: pointer;
-	width: 50%;
+	min-width: 100%;
 	text-align:center;
 	margin-top:10px;
 }

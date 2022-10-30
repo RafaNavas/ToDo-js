@@ -9,24 +9,29 @@ export class ToDoList {
 
         // this.ToDos = [];
         this.loadLocalStorage();
-
-        this.contarToDos();
+        this.totalToDos();
+        this.pendientesToDos();
+        this.completadosToDos();
 
     }
 
     addToDo( tarea ) {
         this.ToDos.push( tarea );
         this.saveLocalStorage();
-        this.contarToDos();
+        this.pendientesToDos();
         this.totalToDos();
+        this.completadosToDos();
+
 
     }
 
     deleteToDo( id ) {
         this.ToDos = this.ToDos.filter( ToDo => ToDo.id != id );
         this.saveLocalStorage();
-        this.contarToDos();
+        this.pendientesToDos();
         this.totalToDos();
+        this.completadosToDos();
+        
     }
 
     marckToDo( id ) {
@@ -42,15 +47,19 @@ export class ToDoList {
     deleteCompletedToDos() {
         this.ToDos = this.ToDos.filter( todo => !todo.completado );
         this.saveLocalStorage();
-        this.contarToDos();
+        this.pendientesToDos();
         this.totalToDos();
+        this.completadosToDos();
+        
 
     }
 
     saveLocalStorage() {
         localStorage.setItem(   'tarea', JSON.stringify( this.ToDos ) );
         localStorage.setItem( 'Total', this.totalToDos() );
-        localStorage.setItem( 'Pendientes', this.contarToDos() );
+        localStorage.setItem( 'Pendientes', this.pendientesToDos() );
+        localStorage.setItem( 'Pendientes', this.completadosToDos() );
+
     }
 
     loadLocalStorage() {
@@ -70,7 +79,7 @@ export class ToDoList {
         //     this.ToDos = [];
     }
 
-    contarToDos() {
+    pendientesToDos() {
         
         let pendientes = 0;
 
@@ -88,10 +97,28 @@ export class ToDoList {
         return pendientes;
     }
 
+    completadosToDos() {
+        
+        let completados = 0;
+
+        this.ToDos.forEach( todo => {
+            
+            if( todo.completado === true ) {
+    
+                completados++ ;
+            }
+
+        });
+
+        qToDos[1].innerText = `${completados}`;
+
+        return completados;
+    }
+
     totalToDos() {
         // const qToDos = document.querySelectorAll('strong');
         // console.log('Los ToDos: ', this.ToDos);
-       qToDos[1].innerText = (this.ToDos.length === 0)? '0' : this.ToDos.length; 
+       qToDos[2].innerText = (this.ToDos.length === 0)? '0' : this.ToDos.length; 
 
         return this.ToDos.length;
     } 
